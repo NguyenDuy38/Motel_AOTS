@@ -3,11 +3,11 @@ const { default: mongoose } = require("mongoose");
 // Định nghĩa schema và model cho collection 'rooms'
 const roomSchema = new mongoose.Schema({
   name: String,
-  group: String, // floors 
+  group: String, // floors
   type: String, // đã thuê, trống, đang sữa chữa
-  price: Number, 
-  deposit: Number, 
-  debt: Number, 
+  price: Number,
+  deposit: Number,
+  debt: Number,
   renter: Number, // number of renters
   day_of_hire: Date,
   expiration_date: Date,
@@ -26,5 +26,5 @@ const roomSchema = new mongoose.Schema({
   updated_at: { type: Date, default: Date.now },
 });
 
-const Room = mongoose.model('rooms', roomSchema);
+const Room = mongoose.model("rooms", roomSchema);
 module.exports = Room;
